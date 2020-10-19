@@ -2,7 +2,6 @@
 import tkinter as tk
 import requests
 
-zipcode = 0
 
 def get_zip_and_update():
     zipcode = zip_entry.get()
