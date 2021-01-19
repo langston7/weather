@@ -10,7 +10,7 @@ def get_zip(): # fetch the zip from user and retrieve info
     #verify that zip is 5 digits
     zipcode = zip_entry.get()
     if len(zipcode) != 5:
-        messagebox.showerror("gay if read", "Zipcode should be 5 digits")
+        messagebox.showerror("x", "Zipcode should be 5 digits")
         return
 
     url = f' http://api.openweathermap.org/data/2.5/weather?zip={zipcode},us&appid=c59ae20c829ab2f70420df085740501e'
@@ -18,7 +18,7 @@ def get_zip(): # fetch the zip from user and retrieve info
     
     #verify that zip is valid based on url
     if response.status_code != 200:
-        messagebox.showerror("gay if read", "error with zip")
+        messagebox.showerror("x", "error with zip")
         return
 
     response_json = response.json()
